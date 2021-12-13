@@ -18,17 +18,13 @@ let outputHtml = document.querySelector('.output')
 
 if (correctEmail) {
     outputHtml.innerHTML= 'Email corretta: benvenuto!'
-}
-
-else {
+} else {
     outputHtml.innerHTML = 'Email errata!'
 }
 
 outputHtml.innerHTML += '<hr/>';
 
-
 // --------------------------------------------------------------------------
-
 
 // dal click del pulsante faccio girare entrambi i dadi
 const diceButton = document.querySelector('.output2 .button'); 
