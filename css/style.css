@@ -1,3 +1,13 @@
-.button {
+.ms_button {
     cursor: pointer;
+}
+
+.ms_button span {
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+.ms_dice1 img,
+.ms_dice2 img {
+    width: 100px;
 }

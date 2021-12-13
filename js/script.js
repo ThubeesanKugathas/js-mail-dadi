@@ -14,7 +14,7 @@ for (let i = 0; i < emailList.length; i++) {
     }
 }
 // a seconda dell'esito dare una risposta all'utente
-let outputHtml = document.querySelector('.output')
+let outputHtml = document.querySelector('.ms_output')
 
 if (correctEmail) {
     outputHtml.innerHTML= 'Email corretta: benvenuto!'
@@ -27,20 +27,20 @@ outputHtml.innerHTML += '<hr/>';
 // --------------------------------------------------------------------------
 
 // dal click del pulsante faccio girare entrambi i dadi
-const diceButton = document.querySelector('.output2 .button'); 
-let result = document.querySelector('.output2 .result');
-let diceResult1 = document.querySelector('.output2 .dice1');
-let diceResult2 = document.querySelector('.output2 .dice2');
+const diceButton = document.querySelector('.ms_output2 .ms_button'); 
+let result = document.querySelector('.ms_output2 .ms_result');
+let diceResult1 = document.querySelector('.ms_output2 .ms_dice1');
+let diceResult2 = document.querySelector('.ms_output2 .ms_dice2');
 
 diceButton.addEventListener('click', function() {
 
     // randomizer del primo dado da 1 a 6
     let dice1 = Math.floor(Math.random() * 6) + 1;
-    diceResult1.innerHTML = `Risultato del dado dell'umano: <img src="./img/dice-${dice1}.jpg" alt="dice-1">`;
+    diceResult1.innerHTML = `<p>Risultato del dado dell'umano:</p> <img src="./img/dice-${dice1}.jpg" alt="dice-1">`;
 
     // randomizer del secondo dado da 1 a 6
     let dice2 = Math.floor(Math.random() * 6) + 1;
-    diceResult2.innerHTML = `Risultato del dado del computer: <img src="./img/dice-${dice2}.jpg" alt="dice-2">`;
+    diceResult2.innerHTML = `<p>Risultato del dado del computer:</p> <img src="./img/dice-${dice2}.jpg" alt="dice-2">`;
 
     // decretare chi ha vinto
     if (dice1 > dice2) {
