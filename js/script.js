@@ -9,7 +9,7 @@ let correctEmail = false;
 
 for (let i = 0; i < emailList.length; i++) {
 
-    if (yourEmail === emailList[i]) {
+    if (yourEmail.toLowerCase() === emailList[i].toLowerCase()) {
         correctEmail = true;
     }
 }
@@ -36,11 +36,11 @@ diceButton.addEventListener('click', function() {
 
     // randomizer del primo dado da 1 a 6
     let dice1 = Math.floor(Math.random() * 6) + 1;
-    diceResult1.innerHTML = `Risultato del dado dell'umano: ${dice1}`;
+    diceResult1.innerHTML = `Risultato del dado dell'umano: <img src="./img/dice-${dice1}.jpg" alt="dice-1">`;
 
     // randomizer del secondo dado da 1 a 6
     let dice2 = Math.floor(Math.random() * 6) + 1;
-    diceResult2.innerHTML = `Risultato del dado del computer: ${dice2}`;
+    diceResult2.innerHTML = `Risultato del dado del computer: <img src="./img/dice-${dice2}.jpg" alt="dice-2">`;
 
     // decretare chi ha vinto
     if (dice1 > dice2) {
